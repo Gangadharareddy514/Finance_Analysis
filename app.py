@@ -15,13 +15,13 @@ from datetime import datetime,timedelta
 
 
 #model = pickle.load(open('model.pkl','rb'))
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route('/')
+@application.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/predict',methods=['POST'])
+@application.route('/predict',methods=['POST'])
 def predict_placement():
     company = str(request.form.get('company'))
     finviz_url = 'https://finviz.com/quote.ashx?t='
@@ -115,4 +115,4 @@ def predict_placement():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=8080)
+    application.run(debug=True)
