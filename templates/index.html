@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+    	 <link rel="stylesheet" href="/static/main.css">
+		<title>Stock News Sentiment Analyzer</title>
+	</head>
+	
+	<body style="font-family:arial, sans-serif", style="width: 70%", style="try.jpg">
+		<center>
+			<h1 style="padding:10px; color:#800000">Impact of News Articles’ Sentiment on Stock Prices</h1>
+			
+			<h3>Enter a Stock Ticker Symbol to See the Daily Sentiment Scores of the Company and Stock Prices</h3>
+
+				<form action="/sentiment" method="POST" align="center">
+						
+					<b>Stock Ticker Symbol: </b>	
+					<input id="text_field" name="company" type="text" required> 				
+					<center><input id="submit_button" type="Submit" class="push_button blue"></center>
+					
+				</form>
+			<p>
+				The sentiment is obtained by performing sentimental analysis on recent news headlines using the <b>BERT Transformer</b>.<br><br>
+				The recent news headlines are obtained from <a href="https://finviz.com">FinViz website</a>.
+				<br><br>
+			</p>
+		</center>
+	</body>
+</html>
